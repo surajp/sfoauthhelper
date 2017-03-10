@@ -1,0 +1,20 @@
+{
+  "name": "oauthtokenfetcher",
+  "version": "1.0.0",
+  "description": "Heroku app for fetching OAuth token from Salesforce, and concatenating it with instance url. For use by Alex Apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "oauth",
+    "heroku",
+    "alexa"
+  ],
+  "author": "Suraj N. Pillai",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "sync-request": "^4.0.1"
+  }
+}
