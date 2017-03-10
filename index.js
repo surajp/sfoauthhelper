@@ -1,12 +1,18 @@
 
 var express = require('express');
 var sync_request = require('sync-request');
+var bodyParser = require('body-parser');
 var app = express();
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 app.set('port', (process.env.PORT || 3000));
 
+
 app.post('/token',function (req, res) {
   console.log(req.body);
+  
   var sr = sync_request('POST', 'https://login.salesforce.com/services/oauth2/token',
                   {
                   headers: {'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},
